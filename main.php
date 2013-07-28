@@ -10,7 +10,7 @@ include "dbconfig.php";
  <html>
  <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
  	<title>coold!</title>
  </head>
  <body>
