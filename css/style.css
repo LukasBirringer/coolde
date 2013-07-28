@@ -11,6 +11,9 @@ header {
 	height: 100px;
 	background: #444;
 }
+header a {
+	color: #fff;	
+}
 #list {
 	width: 900px;
 	height: 1000px;

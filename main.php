@@ -14,7 +14,7 @@ include "dbconfig.php";
  	<title>coold!</title>
  </head>
  <body>
- 	<header></header>
+ 	<header><a href="logout.php">Logout</a></header>
  	<div id="list">
  		<?php 
  		while($row = mysql_fetch_array($res)){
