@@ -28,6 +28,7 @@ include "dbconfig.php";
  			<p class="button" id="edit_<?php echo $row['id']; ?>" href="">
               LÖSCHEN</p>
             <div class="editoverlay" id="over_edit_<?php echo $row['id']; ?>" href="" >
+                <p class="close">x</p>
                 <input type="text" placeholder="Kundenname">
                 <input type="text" placeholder="Beschreibung">
                 <select>
@@ -46,19 +47,28 @@ include "dbconfig.php";
         	$(".button").hide();
             $(".editoverlay").hide();      
 
-        	$(".element").hover(function(){
-                  msg_id = $(this).attr("id");    
+            $(".element").hover(
+              function () {
+                 msg_id = $(this).attr("id");    
                     $("#edit_" + msg_id + "").show(); 
-                },
-                  msg_id = $(this).attr("id");    
-                    $("#edit_" + msg_id + "").hide(); 
-            });
+              },
+              function () {
+                 msg_id = $(this).attr("id");    
+                    $("#edit_" + msg_id + "").hide();
+              }
+            );
+        	
+
              function hoverlink (){
                    
                     linkid = $(this).attr("id");    
                     $("#over_" + linkid + "").show(); 
             }
             $(".button").click(hoverlink);
+            $(".close").click(function(){
+            $(".editoverlay").hide(); 
+                
+            });
            
         });
     </script>
