@@ -9,12 +9,8 @@
 
 	<title>Login // coold!</title>
 	<script type="text/javascript">  
-			<!--
-				// You need to specify the size of your background image here (could be done automatically by some PHP code)
-				var FullscreenrOptions = {  width: 1920, height: 1020, bgID: '#bgimg' };
-				// This will activate the full screen background!
-				jQuery.fn.fullscreenr(FullscreenrOptions);
-			//-->
+		var FullscreenrOptions = {  width: 1920, height: 1020, bgID: '#bgimg' };
+		jQuery.fn.fullscreenr(FullscreenrOptions);
 	</script>
 	 </head>
  	<body>
