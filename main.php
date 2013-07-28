@@ -4,7 +4,7 @@ include "dbconfig.php";
             mysql_select_db($db) OR die("can not select the database $db");
             
 
- $sql = "SELECT client, todo, who, status, kategorie, added FROM coold";
+ $sql = "SELECT id, client, todo, who, status, kategorie, added FROM coold";
             $res = mysql_query($sql);
 ?>
  <html>
@@ -19,35 +19,31 @@ include "dbconfig.php";
  		<?php 
  		while($row = mysql_fetch_array($res)){
  		 ?>
- 		<div class="element" id="<?php echo $row['client']; ?>">
+ 		<div class="element" id="<?php echo $row['id']; ?>">
  			<?php echo "<td>". $row['client'] . "</td>"; ?>
  			<?php echo "<td>". $row['todo'] . "</td>"; ?>
  			<?php echo "<td>". $row['status'] . "</td>"; ?>
  			<?php echo "<td>". $row['who'] . "</td>"; ?>
 
- 			<a class="button" id="edit_<?php echo $row['client']; ?>" href="">
+ 			<a class="button" id="edit_<?php echo $row['id']; ?>" href="">
               LÖSCHEN</a>
-
+            <div id="editoverlay">Overlay</div>
  		</div>
  		<?php } ?>
  	</div>
  	<script type="text/javascript">
         
 
-        $(document).ready(function(){
-            $(".button").hover(function(){ 
-                 aa = $(this).attr("id");
-                alert (aa);
-            });
-        	
-
-        	//$(".button").hide();
+        $(document).ready(function(){         
+        	$(".button").hide();
         	$(".element").hover(function(){
-                 msg_id = $(this).attr("id");	
-
-  				 $("#edit_" + msg_id + "").fadeOut();
-        	});
-        	
+                msg_id = $(this).attr("id");	
+  				$("#edit_" + msg_id + "").fadeIn();
+               }
+               ,function(){
+                msg_id = $(this).attr("id");
+                $("#edit_" + msg_id + "").fadeOut();               
+        	});        	
         });
     </script>
  </body>
