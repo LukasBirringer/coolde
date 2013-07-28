@@ -25,10 +25,11 @@
 				<div class="form">
 					<form action="login.php" method="post">
 						<div class="inputs">
-							<i class="icon-user"></i><input type="text" name="username" class="username" placeholder="Enter the Username"><br/>
-							<i class="icon-lock"></i><input type="text" name="password" class="password" placeholder="Enter the Username">
+							<i class="icon-user"></i><input type="text" name="username" class="username" placeholder="Enter the Username" tabindex="1"><br/>
+							<div class="trenner"></div>
+							<i class="icon-lock"></i><input type="text" name="password" class="password" placeholder="Enter the Username" tabindex="2">
 						</div>
-						<input type="submit" value="Login" class="login">
+						<input type="submit" value="Login" class="login" tabindex="3">
 					</form>
 				</div>
 			</div>				

@@ -91,7 +91,7 @@ h1{
 	font-size: 14px;
 }
 
-i{color: #0f595e;}
+i{color: #0f595e; position: absolute; padding: 10px 0 0 8px;}
 
 input[type="text"]{
 	border: none !important;
@@ -103,4 +103,12 @@ input[type="text"]{
 	font-size: 14px;
 	padding: 20px 0 20px 20px;
 	margin: 0 0 0 10px;
+	outline: 0 !important;
+}
+
+.trenner{
+	width: 240px;
+	height: 1px;
+	border-top: 1px #e9e9e9 solid;
+	margin: auto;
 }
