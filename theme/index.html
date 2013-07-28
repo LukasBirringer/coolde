@@ -29,26 +29,39 @@
 			<article class="item">
 				<div class="content">
 					<div class="iteml">
-						<h3>Kundenname</h3>
+						<h3>Kundenname</h3><span class="edit"><a href=""><i class="icon-pencil"></i></a></span><br/>
 						<p>Matrix Table Rates-Problem lösen</p>
 					</div>
 					<div class="itemr">
 						<p><i class="icon-calendar"></i><span class="added">hinzugefügt am: 28.07.2013</span></p>
-						<p><i class="icon-male"></i><span class="added">hinzugefügt am: 28.07.2013</span></p>
+						<p><i class="icon-male"></i><span class="added">Bearbeiter: Tobias</span></p>
 					</div>
 				</div>					
 				<div class="status">
 					
 				</div>
+
 			</article>
+
 		</section>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".addclform").hide();
+				$(".edit").hide();
 
 				$(".addcl").click(function(){
+
 					$(".addclform").slideDown();
 				});	
+
+				$(".item").hover(
+					function(){
+						$(".edit").show();
+				},
+				function(){
+						$(".edit").hide();
+				}
+				);
 			});
 		</script>
 	</body>
