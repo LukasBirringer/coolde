@@ -25,25 +25,41 @@ include "dbconfig.php";
  			<?php echo "<td>". $row['status'] . "</td>"; ?>
  			<?php echo "<td>". $row['who'] . "</td>"; ?>
 
- 			<a class="button" id="edit_<?php echo $row['id']; ?>" href="">
-              LÖSCHEN</a>
-            <div id="editoverlay">Overlay</div>
+ 			<p class="button" id="edit_<?php echo $row['id']; ?>" href="">
+              LÖSCHEN</p>
+            <div class="editoverlay" id="over_edit_<?php echo $row['id']; ?>" href="" >
+                <input type="text" placeholder="Kundenname">
+                <input type="text" placeholder="Beschreibung">
+                <select>
+                    <option>Status</option>
+                    <option>Rot</option>
+                </select>
+                <input type="text" placeholder="Zugeteilter">
+            </div>
  		</div>
  		<?php } ?>
  	</div>
  	<script type="text/javascript">
         
 
-        $(document).ready(function(){         
+        $(document).ready(function(){    
         	$(".button").hide();
+            $(".editoverlay").hide();      
+
         	$(".element").hover(function(){
-                msg_id = $(this).attr("id");	
-  				$("#edit_" + msg_id + "").fadeIn();
-               }
-               ,function(){
-                msg_id = $(this).attr("id");
-                $("#edit_" + msg_id + "").fadeOut();               
-        	});        	
+                  msg_id = $(this).attr("id");    
+                    $("#edit_" + msg_id + "").show(); 
+                },
+                  msg_id = $(this).attr("id");    
+                    $("#edit_" + msg_id + "").hide(); 
+            });
+             function hoverlink (){
+                   
+                    linkid = $(this).attr("id");    
+                    $("#over_" + linkid + "").show(); 
+            }
+            $(".button").click(hoverlink);
+           
         });
     </script>
  </body>
