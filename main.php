@@ -28,12 +28,12 @@ header("location:main.php");
 }
 
 //INSERT
-if(isset($_POST['kundenname'])){
+if(isset($_POST['kundennamenew'])){
 $kundenname = $_POST["kundennamenew"]; 
 $todo = $_POST["todonew"]; 
 $who = $_POST["whonew"]; 
 $status = $_POST["statusnew"];
-$result = mysql_query("INSERT INTO produkte (kundenname, todo, who, status) VALUES('".$kundenname."','".$todo."','".$who."','".$status."')") or die (mysql_error());
+$result = mysql_query("INSERT INTO coold (client, todo, who, status) VALUES('".$kundenname."','".$todo."','".$who."','".$status."')") or die (mysql_error());
 header("location:main.php");
 }
 ?>
@@ -45,7 +45,20 @@ header("location:main.php");
  </head>
  <body>
  	<header><a href="logout.php">Logout</a></header>
-    <div id="add">ok</div>
+    <div id="add">
+        <form action="main.php" method="post">
+                <input type="text" name="kundennamenew" placeholder="Kundenname">
+                <input type="text" name="todonew" placeholder="Beschreibung">
+                <select name="statusnew">
+                    <option>Status</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <input type="text" name="whonew" placeholder="Zugeteilter">
+                <input type="submit" value="Speichern">
+                </form>
+    </div>
  	<div id="list">
  		<?php 
  		while($row = mysql_fetch_array($res)){
