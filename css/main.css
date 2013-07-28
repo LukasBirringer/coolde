@@ -31,3 +31,8 @@ header a {
 #edit {
 	padding: 5px;
 }
+.editoverlay a {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+}
