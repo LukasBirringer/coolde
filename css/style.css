@@ -93,7 +93,7 @@ h1{
 
 i{color: #0f595e; position: absolute; padding: 10px 0 0 8px;}
 
-input[type="text"]{
+input[type="text"], input[type="password"]{
 	border: none !important;
 	width: 240px;
 	height: 30px;
