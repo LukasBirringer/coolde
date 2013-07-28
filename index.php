@@ -1,5 +1,4 @@
 <?php 
-echo "wuuulst!";
-
-echo "Was geht ab?";
+echo "loginhere";
  ?>
+ <a href="main.php">goigogo</a>

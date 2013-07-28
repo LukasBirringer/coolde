@@ -1,0 +1,26 @@
+* {	
+margin: 0;
+padding: 0;
+}
+header {
+	width: 100%;
+	height: 100px;
+	background: #444;
+}
+#list {
+	width: 900px;
+	height: 1000px;
+	margin: 100 auto;
+	background: #dedede;
+}
+.element {
+	width: 880px;
+	height: 100px;
+	margin: 8px;
+	border: 1px solid #fff;
+	background: #333;
+	color:#fff;
+}
+#edit {
+	padding: 5px;
+}
