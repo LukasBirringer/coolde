@@ -42,16 +42,53 @@
 				</div>
 
 			</article>
+			<article class="form">
+				<form action="" method="post">
+					<div class="forml">
+						<div class="row">
+							<input type="text" name="client" placeholder="Kundenname eintragen..." />
+							<input type="text" name="todo" placeholder="Todo eintragen..." />
+						</div>			
+						<div class="row">
+							<div class="select">			
+								<select>
+									<option>Status auswählen</option>
+									<option>in Vorbereitung</option>
+									<option>in Umsetzung</option>
+									<option>abgeschlossen</option>
+								</select>
+							</div>								
+							<input type="text" name="bearbeiter" class="editor" placeholder="Bearbeiter..." />
+						</div>							
+					</div>
+					<div class="formr">
+						<i class="icon-remove"></i>
+						<a href="#" class="submit"><i class="icon-save"></i><span>ToDo speichern</span></a>
+					</div>
+				</form>
+				
+			</article>
 
 		</section>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".addclform").hide();
 				$(".edit").hide();
+				$(".form").hide();
 
 				$(".addcl").click(function(){
 
 					$(".addclform").slideDown();
+				});	
+
+				$(".submit").click(function(){
+
+					$(".form").fadeOut();
+				});	
+
+				$(".icon-remove").click(function(){
+
+					$(".form").fadeOut();
 				});	
 
 				$(".item").hover(
