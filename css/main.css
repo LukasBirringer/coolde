@@ -1,38 +1,59 @@
-* {	
-	margin: 0;
-	padding: 0;
-}
-body{
-	overflow: hidden;
-	width: 100%;
-}
-header {
-	width: 100%;
-	height: 100px;
-	background: #444;
-}
-header a {
-	color: #fff;	
-}
-#list {
-	width: 900px;
-	height: 1000px;
-	margin: 100 auto;
-	background: #dedede;
-}
-.element {
-	width: 880px;
-	height: 100px;
-	margin: 8px;
-	border: 1px solid #fff;
-	background: #333;
-	color:#fff;
-}
-#edit {
-	padding: 5px;
-}
-.editoverlay a {
-	font-size: 14px;
-	color: #fff;
-	text-decoration: none;
-}
+body,html{margin: 0;padding: 0;}
+body{background: #e3e3e3; width: 100%; height: 100%;}
+h1{font-family: 'Raleway', sans-serif; font-size: 36px; font-weight: 700; color: #323232; margin: 0 0 0 20px; line-height: 47px; float: left;}
+h2{font-family: 'Raleway', sans-serif; font-size: 25px; font-weight: 200; color: #0f595e; float: left; margin: 0; padding: 0;}
+h3{font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 400; color: #0f595e; float: left; margin: 0; padding: 0;}
+
+.wrapper{width: 960px; margin: auto; /*border: 1px #000 solid*/;}
+
+header{height: 70px; margin: 30px auto !important;}
+	header img{float: left; width: 51px; height: 47px;}
+
+::-webkit-input-placeholder {color: #23b684;}
+:-moz-placeholder{color:#23b684;}
+::-moz-placeholder{color: #23b684;}
+:-ms-input-placeholder{color: #23b684;}
+
+.logout{width: auto; float: right; margin: 20px 0 0 0;}
+	.logout a{font-family: 'Raleway', sans-serif; font-size: 15px; font-weight: 400; text-decoration: none; color: #909090;}
+	.logout a:hover{color: #c2c2c2;}
+	.icon-off{color: #c2c2c2; padding: 0 5px 0 0;}
+
+section{}
+	section header{border-bottom: 1px #d4d4d4 solid; height: 25px; padding: 0 0 20px 0;}
+	.addcl{width: 120px; height: 25px; padding: 5px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; float: right; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px;}
+	.addcl:hover{background: #15757b;}
+	.icon-plus, .icon-save{padding: 0 10px 0 0;}
+
+article{}
+	article.item{width: 960px; height: 70px; float: left; margin: 10px auto; background: #ececec; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 1}
+	article.item:first-child{margin: 25px 0 0 0;}
+		.content{float: left; padding: 13px 0 0 10px; width: 97%;}
+		.iteml{float: left;}
+		.itemr{float: right;}
+			.edit{position: relative;}
+				.edit a{text-decoration: none;}
+			.icon-calendar, .icon-male{color: #c2c2c2; padding: 0 6px 0 0;}
+			.icon-pencil{color: #676767; float: left; padding: 0 0 0 10px;}
+
+			.itemr p{font-family: 'Raleway', sans-serif; font-size: 12px; color: #323232; padding: 0; margin: 3px 0 0 0}
+			.itemr p:nth-child(2){margin: 10px 0 0 3px;}
+		.status1{width: 10px; height: 70px; float: right; background: red;}
+		.status2{width: 10px; height: 70px; float: right; background: yellow;}
+		.status3{width: 10px; height: 70px; float: right; background: #488035;}
+		
+	article p{font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 400; color: #323232; margin: 10px 0 0 0; padding: 0;}
+
+	article.form{width: 960px; height: 70px; position: absolute; background: rgba(255,255,255,0.9); margin: 10px 0 0 0; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 5;}
+		.forml{float: left; }
+		.formr{float: right; height: 70px; }
+		.icon-remove{color: #23b684; float: right; position: relative; padding: 3px 7px 0 0}
+		.icon-remove:hover{color: #26d096; cursor: pointer;}
+			.row{width: 230px; float: left;}
+			input[type="text"]{width: 220px; height: 30px; border: 1px solid #ccc; padding: 4.5px 0 0 7px; margin: 2px 0 0 10px; font-family: 'Raleway', sans-serif; font-size: 14px; color: #23b684; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none;}
+			.editor{width: 152px !important;}
+			.submit{width: 120px; height: 25px; padding: 5px; position: absolute; bottom: 6px; right: 25px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px;}
+				.submit:hover{background: #15757b;}
+			.select{width: 150px; height: 26px; overflow: hidden; background: url(../images/arrow-down.jpg) no-repeat right #FFF; border: 1px solid #ccc; margin: 3px 0 0 10px;}	
+				.select select{ background: transparent; width: 150px; height: 26px; padding: 5px; font-size: 14px; line-height: 1; border: 0; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none; font-family: 'Raleway', sans-serif; font-size: 14px; color: #23b684; -webkit-appearance: none;}
+				.select select option{font-family: 'Raleway', sans-serif; font-size: 13px; color: #323232;}
