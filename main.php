@@ -46,6 +46,7 @@ header("location:main.php");
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        
     </head>
     <body>
         <header class="wrapper">
@@ -130,11 +131,11 @@ header("location:main.php");
                                     </select>
                                 </div>                              
                                 <input type="text" name="who" class="editor" value="<?php echo $row['who']; ?>" />
-                            </div>                          
+                            </div> 
                         </div>
                         <div class="formr">
                             <i class="icon-remove"></i>
-                            <input type="submit" value="speichern">
+                            <input type="submit" class="addcl" value="ToDo speichern">
                             <!--<a href="#" class="submit"><i class="icon-save"></i><span>ToDo speichern</span></a>-->
                         </div>
                     </form>
