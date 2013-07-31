@@ -71,9 +71,9 @@ header("location:main.php");
                                 <div class="select">            
                                     <select name="statusnew">
                                         <option>Status auswählen</option>
-                                        <option value="1">in Vorbereitung</option>
+                                        <option value="3">in Vorbereitung</option>
                                         <option value="2">in Umsetzung</option>
-                                        <option value="3">abgeschlossen</option>
+                                        <option value="1">abgeschlossen</option>
                                     </select>
                                 </div>                              
                                 <input type="text" name="whonew" class="editor" placeholder="Bearbeiter..." />
@@ -89,7 +89,7 @@ header("location:main.php");
             <?php 
 
             while($row = mysql_fetch_array($res)){
-                if ($row['kategorie'] == 1) {
+                if ($row['kategorie'] == 1 && $row['status'] != 1) {
             
             ?>
             <article class="item" id="<?php echo $row['id']; ?>">
@@ -124,9 +124,9 @@ header("location:main.php");
                                 <div class="select">            
                                     <select name="status">
                                         <option>Status auswählen</option>
-                                        <option value="1">in Vorbereitung</option>
+                                        <option value="3">in Vorbereitung</option>
                                         <option value="2">in Umsetzung</option>
-                                        <option value="3">abgeschlossen</option>
+                                        <option value="1">abgeschlossen</option>
                                     </select>
                                 </div>                              
                                 <input type="text" name="who" class="editor" value="<?php echo $row['who']; ?>" />
@@ -145,6 +145,48 @@ header("location:main.php");
                 </div>
             </article>
             <?php }} ?>
+
+            <div id="showfertig">            
+                <p>zeige abgeschlossene Aufgaben</p>
+            </div>
+
+
+            <?php 
+                     mysql_data_seek($res, 0);
+                    while($rowf = mysql_fetch_array($res)){
+                    if ($rowf['kategorie'] == 1 && $rowf['status'] == 1) {
+                ?>
+
+            <div class="fertig">
+                <article class="item" id="<?php echo $rowf['id']; ?>">
+                <div class="content">
+                    <div class="iteml">
+                        <h3><?php  echo $rowf['client']; ?></h3>
+                        <span class="edit" id="edit_<?php echo $rowf['id']; ?>">
+                            <i class="icon-pencil"></i>
+                        </span>
+                        <br/>
+                        <p><?php echo $rowf['todo']; ?></p>
+                    </div>
+                    <div class="itemr">
+                        <p><i class="icon-calendar"></i>
+                            <span class="added">hinzugefügt am: 28.07.2013</span>
+                        </p>
+                        <p><i class="icon-male"></i>
+                            <span class="added">Bearbeiter: <?php echo $rowf['who']; ?></span>
+                        </p>
+                    </div>
+                </div>                  
+                
+                
+                <div class="status<?php echo $rowf['status'];?>">
+                    
+                </div>
+            </article>             
+            </div>
+
+            <?php }} ?>
+           
            
 
         </section>
@@ -165,9 +207,9 @@ header("location:main.php");
                                 <div class="select">            
                                     <select name="statusnew">
                                         <option>Status auswählen</option>
-                                        <option value="1">in Vorbereitung</option>
+                                        <option value="3">in Vorbereitung</option>
                                         <option value="2">in Umsetzung</option>
-                                        <option value="3">abgeschlossen</option>
+                                        <option value="1">abgeschlossen</option>
                                     </select>
                                 </div>                              
                                 <input type="text" name="whonew" class="editor" placeholder="Bearbeiter..." />
@@ -183,7 +225,7 @@ header("location:main.php");
             <?php 
             mysql_data_seek($res, 0);
             while($rowc = mysql_fetch_array($res)){
-                if ($rowc['kategorie'] == 2) {
+                 if ($rowc['kategorie'] == 2 && $rowc['status'] != 1) {
             ?>
             <article class="item" id="<?php echo $rowc['id']; ?>">
                 <div class="content">
@@ -217,9 +259,9 @@ header("location:main.php");
                                 <div class="select">            
                                     <select name="status">
                                         <option>Status auswählen</option>
-                                        <option value="1">in Vorbereitung</option>
+                                        <option value="3">in Vorbereitung</option>
                                         <option value="2">in Umsetzung</option>
-                                        <option value="3">abgeschlossen</option>
+                                        <option value="1">abgeschlossen</option>
                                     </select>
                                 </div>                              
                                 <input type="text" name="who" class="editor" value="<?php echo $rowc['who']; ?>" />
@@ -239,6 +281,46 @@ header("location:main.php");
             </article>
             <?php }} ?>
            
+           <div id="showfertig-coop">            
+                <p>zeige abgeschlossene Aufgaben</p>
+            </div>
+
+
+            <?php 
+                     mysql_data_seek($res, 0);
+                    while($rowcf = mysql_fetch_array($res)){
+                    if ($rowcf['kategorie'] == 2 && $rowcf['status'] == 1) {
+                ?>
+
+            <div class="fertig-coop">
+                <article class="item" id="<?php echo $rowcf['id']; ?>">
+                <div class="content">
+                    <div class="iteml">
+                        <h3><?php  echo $rowcf['client']; ?></h3>
+                        <span class="edit" id="edit_<?php echo $rowcf['id']; ?>">
+                            <i class="icon-pencil"></i>
+                        </span>
+                        <br/>
+                        <p><?php echo $rowcf['todo']; ?></p>
+                    </div>
+                    <div class="itemr">
+                        <p><i class="icon-calendar"></i>
+                            <span class="added">hinzugefügt am: 28.07.2013</span>
+                        </p>
+                        <p><i class="icon-male"></i>
+                            <span class="added">Bearbeiter: <?php echo $rowf['who']; ?></span>
+                        </p>
+                    </div>
+                </div>                  
+                
+                
+                <div class="status<?php echo $rowcf['status'];?>">
+                    
+                </div>
+            </article>             
+            </div>
+
+            <?php }} ?>
 
         </section>
         <script type="text/javascript">
@@ -248,6 +330,8 @@ header("location:main.php");
                 $(".addclform").hide();
                 $(".addclform-coop").hide();
                 $(".edit").hide();
+                $(".fertig").hide();
+                $(".fertig-coop").hide();
 
                 //show addForm
                 $(".addcl").click(function(){
@@ -290,6 +374,18 @@ header("location:main.php");
                 $("#remove-addform-coop").click(function(){
 
                     $(".addclform-coop").slideUp();
+                }); 
+
+                //show Fertige
+                $("#showfertig").click(function(){
+
+                    $(".fertig").slideDown();
+                    $("#showfertig").slideUp();
+                }); 
+                $("#showfertig-coop").click(function(){
+
+                    $(".fertig-coop").slideDown();
+                    $("#showfertig-coop").slideUp();
                 }); 
         </script>
     </body>

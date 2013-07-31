@@ -14,6 +14,11 @@ header{height: 70px; margin: 30px auto !important;}
 ::-moz-placeholder{color: #23b684;}
 :-ms-input-placeholder{color: #23b684;}
 
+#showfertig, #showfertig-coop {width: 960px; height: 48px; background: #ececec;  float: left; margin: 10px auto;}
+#showfertig p, #showfertig-coop p {font-family: 'Raleway', sans-serif; font-size: 14px; color: #323232; text-align: center; padding: 0; line-height: 20px;}
+.fertig, .fertig-coop {width: 960px;  float: left; margin: 0px auto;}
+
+
 .logout{width: auto; float: right; margin: 20px 0 0 0;}
 	.logout a{font-family: 'Raleway', sans-serif; font-size: 15px; font-weight: 400; text-decoration: none; color: #909090;}
 	.logout a:hover{color: #c2c2c2;}
@@ -38,9 +43,9 @@ article{}
 
 			.itemr p{font-family: 'Raleway', sans-serif; font-size: 12px; color: #323232; padding: 0; margin: 3px 0 0 0}
 			.itemr p:nth-child(2){margin: 10px 0 0 3px;}
-		.status1{width: 10px; height: 70px; float: right; background: red;}
-		.status2{width: 10px; height: 70px; float: right; background: yellow;}
-		.status3{width: 10px; height: 70px; float: right; background: #488035;}
+		.status1{width: 10px; height: 70px; float: right; background: #5EBC41;}
+		.status2{width: 10px; height: 70px; float: right; background: #FFBF00;}
+		.status3{width: 10px; height: 70px; float: right; background: #BB2828;}
 		
 	article p{font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 400; color: #323232; margin: 10px 0 0 0; padding: 0;}
 
