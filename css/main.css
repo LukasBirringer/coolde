@@ -26,9 +26,10 @@ header{height: 70px; margin: 30px auto !important;}
 
 section{}
 	section header{border-bottom: 1px #d4d4d4 solid; height: 25px; padding: 0 0 20px 0;}
-	.addcl{width: 120px; height: 25px; padding: 5px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; float: right; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px;}
+	.addcl, .addcl-coop{width: 120px; height: 25px; padding: 5px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; float: right; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px;}
 	.addcl:hover{background: #15757b;}
-	.icon-plus, .icon-save{padding: 0 10px 0 0;}
+	
+	.icon-plus, .icon-save, .icon-trash{padding: 0 10px 0 0;}
 
 article{}
 	article.item{width: 960px; height: 70px; float: left; margin: 10px auto; background: #ececec; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 1}
@@ -48,8 +49,10 @@ article{}
 		.status3{width: 10px; height: 70px; float: right; background: #BB2828;}
 		
 	article p{font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 400; color: #323232; margin: 10px 0 0 0; padding: 0;}
-
-	article.form{width: 960px; height: 70px; position: absolute; background: rgba(255,255,255,0.9); margin: 10px 0 0 0; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 5;}
+	
+	article.addclform{width: 960px; height: 70px !important;}
+	
+	article.form{width: 960px; height: 70px; position: absolute; background: rgba(255,255,255,0.9); margin: 0 0 0 0; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 5;}
 		.forml{float: left; }
 		.formr{float: right; height: 70px; }
 		.icon-remove{color: #23b684; float: right; position: relative; padding: 3px 7px 0 0}
@@ -57,8 +60,15 @@ article{}
 			.row{width: 230px; float: left;}
 			input[type="text"]{width: 220px; height: 30px; border: 1px solid #ccc; padding: 4.5px 0 0 7px; margin: 2px 0 0 10px; font-family: 'Raleway', sans-serif; font-size: 14px; color: #23b684; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none;}
 			.editor{width: 152px !important;}
-			.submit{width: 120px; height: 25px; padding: 5px; position: absolute; bottom: 6px; right: 25px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px;}
+			.submit{width: 135px; height: 35px; padding: 5px; position: relative; top: 25px; right: 35px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 				.submit:hover{background: #15757b;}
+			
+			.delete{width: 135px; height: 35px; padding: 5px; position: absolute; bottom: 10px; right: 180px; background: #0f595e; font-family: 'raleway', sans-serif; font-size: 12px; font-weight: 200; text-align: center; text-decoration: none; color: #FFF; display: block; line-height: 25px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -border-radius: 2px; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}	
+				.delete:hover{background: #15757b;}			
+			
 			.select{width: 150px; height: 26px; overflow: hidden; background: url(../images/arrow-down.jpg) no-repeat right #FFF; border: 1px solid #ccc; margin: 3px 0 0 10px;}	
 				.select select{ background: transparent; width: 150px; height: 26px; padding: 5px; font-size: 14px; line-height: 1; border: 0; webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none; font-family: 'Raleway', sans-serif; font-size: 14px; color: #23b684; -webkit-appearance: none;}
 				.select select option{font-family: 'Raleway', sans-serif; font-size: 13px; color: #323232;}
+
+#kunden-todos{float: left;}
+#coop-todos{float: left;}
