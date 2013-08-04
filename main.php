@@ -172,7 +172,7 @@ header("location:main.php");
                         </div>
                         <div class="itemr">
                             <p><i class="icon-calendar"></i>
-                                <span class="added">hinzugefügt am: 28.07.2013</span>
+                                <span class="added">hinzugefügt am: <?php echo date('d.m.Y',strtotime($row['added'])); ?></span>
                             </p>
                             <p><i class="icon-male"></i>
                                 <span class="added">Bearbeiter: <?php echo $rowf['who']; ?></span>
@@ -239,7 +239,7 @@ header("location:main.php");
                         </div>
                         <div class="itemr">
                             <p><i class="icon-calendar"></i>
-                                <span class="added">hinzugefügt am: 28.07.2013</span>
+                                <span class="added">hinzugefügt am: <?php echo date('d.m.Y',strtotime($rowc['added'])); ?></span>
                             </p>
                             <p><i class="icon-male"></i>
                                 <span class="added">Bearbeiter: <?php echo $rowc['who']; ?></span>
