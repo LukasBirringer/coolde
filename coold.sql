@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 28. Jul 2013 um 20:22
--- Server Version: 5.6.11
--- PHP-Version: 5.5.0
+-- Erstellungszeit: 04. Aug 2013 um 15:30
+-- Server Version: 5.5.32
+-- PHP-Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Datenbank: `coold`
+-- Datenbank: `db120444x1917895`
 --
-CREATE DATABASE IF NOT EXISTS `coold` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `coold`;
+CREATE DATABASE IF NOT EXISTS `db120444x1917895` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db120444x1917895`;
 
 -- --------------------------------------------------------
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `coold` (
   `kategorie` int(1) NOT NULL,
   `added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Daten für Tabelle `coold`
@@ -45,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `coold` (
 
 INSERT INTO `coold` (`ID`, `client`, `todo`, `who`, `status`, `kategorie`, `added`) VALUES
 (1, 'BatterieExpress GmbH', 'Konfigurator', 'Fabian, Lukas', 1, 1, '2013-07-28 15:01:57'),
-(2, 'BatterieExpress GmbH', 'MatrixTableRates', 'Tobias', 2, 1, '2013-07-28 15:01:57'),
 (3, 'co-op design', 'CRM', 'Tobias', 2, 2, '2013-07-28 15:01:57');
 
 -- --------------------------------------------------------

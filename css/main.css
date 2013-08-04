@@ -14,7 +14,7 @@ header{height: 70px; margin: 30px auto !important;}
 ::-moz-placeholder{color: #23b684;}
 :-ms-input-placeholder{color: #23b684;}
 
-#showfertig, #showfertig-coop {width: 960px; height: 48px; background: #ececec;  float: left; margin: 10px auto;}
+#showfertig, #showfertig-coop {width: 960px; height: 48px; background: #ececec;  float: left; margin: 10px auto; }
 #showfertig p, #showfertig-coop p {font-family: 'Raleway', sans-serif; font-size: 14px; color: #323232; text-align: center; padding: 0; line-height: 20px;}
 .fertig, .fertig-coop {width: 960px;  float: left; margin: 0px auto;}
 
